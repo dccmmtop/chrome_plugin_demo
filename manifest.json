@@ -1,0 +1,30 @@
+{
+  "name": "超",
+  "description": "测试",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://hellogithub.com/*"
+      ],
+      "js": [
+        "js/jq.js",
+        "js/custom.js"
+      ],
+      "css": [
+        "css/custom.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "webNavigation"
+  ]
+}
